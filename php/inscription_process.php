@@ -18,8 +18,8 @@ exit;
 }
 //password vide
 $validpwd = $_POST['password'];
-if (empty($validpwd)){
-  header('Location: inscription.php');
+if (!isset($validpwd)){
+  header('Location: inscription.php?mdp');
   exit;
 }
 // Insertion en bdd
