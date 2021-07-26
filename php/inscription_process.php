@@ -3,7 +3,7 @@
 require('../config/config.php');
 $pseudo = trim($_POST['pseudo']);
 
-if (!isset($pseudo) || strlen($pseudo)>10){ //isset = different de Null strlen compte le nombre de carcatere dans le pseudo
+if (empty($pseudo) || strlen($pseudo)>10){ //isset = different de Null strlen compte le nombre de carcatere dans le pseudo
 header('Location: inscription.php?PseudoVide');
 exit;
 }
@@ -19,7 +19,7 @@ exit;
 //password vide
 $validpwd = $_POST['password'];
 if (empty($validpwd)){
-  header('Location: submit.php');
+  header('Location: inscription.php');
   exit;
 }
 // Insertion en bdd
