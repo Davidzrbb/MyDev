@@ -8,7 +8,7 @@
     <title>Accueil</title>
   </head>
   <body>
-<?php include_once("html/nav.html") ?>
+<?php include_once("php/nav.php") ?>
 <?php include_once("config/config.php") ?>
 
 <?php include_once("html/footer.html") ?>
