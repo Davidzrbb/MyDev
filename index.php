@@ -8,8 +8,8 @@
     <title>Accueil</title>
   </head>
   <body>
-<?php include_once("../html/nav.html") ?>
+<?php include_once("html/nav.html") ?>
 
-<?php include_once("../html/footer.html") ?>
+<?php include_once("html/footer.html") ?>
   </body>
 </html>
