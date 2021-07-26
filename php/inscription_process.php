@@ -8,7 +8,7 @@ header('Location: inscription.php');
 exit;
 }
 //verifier si le pseudo est libre
-$q = "SELECT id FROM users WHERE pseudo = ? ";
+$q = "SELECT id FROM users WHERE name = ? ";
 $req = $pdo ->prepare($q);
 $req->execute([$pseudo]);
 $results = $req->fetchAll();
