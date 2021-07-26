@@ -7,9 +7,6 @@ $dbname="d8pfh3if6dtkvm";
 try {
 $dsn = "pgsql:host=$host;port=5432;dbname=$dbname;user=$user;password=$password";
   $pdo = new PDO($dsn);
-  if($pdo){
-   echo "Connecté à $dbname avec succès!";
-  }
 }
 catch (PDOException $e) {
 echo 'nope' . $e->getMessage();
