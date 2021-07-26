@@ -4,22 +4,22 @@ require('../config/config.php');
 $pseudo = trim($_POST['pseudo']);
 
 if (!isset($pseudo) || strlen($pseudo)>10){ //isset = different de Null strlen compte le nombre de carcatere dans le pseudo
-header('Location: inscription.php');
+header('Location: inscription.php?PseudoVide');
 exit;
 }
 //verifier si le pseudo est libre
-$q = "SELECT id FROM users WHERE name = ? ";
+$q = "SELECT id FROM users WHERE pseudo = ? ";
 $req = $pdo ->prepare($q);
 $req->execute([$pseudo]);
 $results = $req->fetchAll();
  if (count($results) > 0){
-   header('Location: submit.php');
+   header('Location: inscription.php?PseudoNon');
 exit;
 }
 //password vide
 $validpwd = $_POST['password'];
 if (empty($validpwd)){
-  header('Location: inscription.php');
+  header('Location: submit.php');
   exit;
 }
 // Insertion en bdd
@@ -33,7 +33,7 @@ $req->execute([
 'val2' => $pwd
 ]);
 
-header('Location:connexion.php');
+header('Location:connexion.php?InscriptionOk');
 exit;
 
  ?>
