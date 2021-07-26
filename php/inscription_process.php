@@ -26,7 +26,7 @@ if (empty($validpwd)){
 $pseudoValid = htmlspecialchars($pseudo);
 $pwd = hash('sha256',$validpwd) ; // hash('sha256') permet de hasher le pw des users
 
-$q='INSERT INTO user (pseudo, pasword) VALUES (:val1,:val2)';
+$q='INSERT INTO users (name, password) VALUES (:val1,:val2)';
 $req = $db->prepare($q);
 $req->execute([
 'val1' => $pseudoValid,
