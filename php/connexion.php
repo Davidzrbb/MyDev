@@ -8,7 +8,7 @@
   <title>Connexion</title>
 </head>
 <body>
-  <?php include_once("../html/nav.html") ?>
+  <?php include_once("nav.php") ?>
 <?php include_once("../html/footer.html") ?>
   <form class="form_connexion">
     <div id="div_connexion"class ="bg-light div_connexion">

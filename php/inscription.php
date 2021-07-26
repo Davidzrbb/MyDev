@@ -8,19 +8,19 @@
   <title>Connexion</title>
 </head>
 <body>
-  <?php include_once("../html/nav.html") ?>
+  <?php include_once("nav.php") ?>
 <?php include_once("../html/footer.html") ?>
-  <form class="form_connexion">
+  <form class="form_connexion" action="inscription_process.php" method="post">
     <div id="div_connexion"class ="bg-light div_connexion">
       <h1>Inscription</h1>
     </br>
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Pseudo</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <label for="pseudo" class="form-label">Pseudo</label>
+      <input type="text" class="form-control" id="pseudo">
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <label for="password" class="form-label">Mot de passe</label>
+      <input type="password" class="form-control" id="password">
     </div>
   </br>
   <button type="submit" class="btn btn-secondary">Confirmer</button>
